@@ -76,7 +76,8 @@ docs/_build/
 .pybuilder/
 target/
 
-# Jupyter Notebook
+# Jupyter Notebook outputs may contain private execution metadata.
+*.ipynb
 .ipynb_checkpoints
 
 # IPython
@@ -218,3 +219,52 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+# Private development metadata and assistant histories
+.idea/
+.codebuddy/
+.workbuddy/
+.DS_Store
+
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials/
+.credentials/
+
+# Python, environments, and build artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+*.egg-info/
+build/
+dist/
+
+# Unreviewed datasets, generation outputs, and experiment artifacts
+*.parquet
+*.jsonl
+*.log
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+wandb/
+wandb-*/
+checkpoints/
+rl_results/
+results/
+outputs/
+logs/
+*.zip
+
+# Local temporary test fixtures
+.eval_*/
+.test_*/
+.release_*/
+.ipynb_checkpoints/
